@@ -79,6 +79,7 @@ struct Scraper {
             }
             guard let httpResponse = response as? HTTPURLResponse,
                 let unwrappedData = data,
+                unwrappedData.count > 0,
                 httpResponse.statusCode == 200
             else {
                     completion(nil, ScraperError.serverError)
@@ -114,6 +115,7 @@ struct Scraper {
             }
             guard let httpResponse = response as? HTTPURLResponse,
                 let unwrappedData = data,
+                unwrappedData.count > 0,
                 httpResponse.statusCode == 200
                 else {
                     completion(nil, nil, ScraperError.serverError)

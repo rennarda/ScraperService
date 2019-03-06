@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct SwimmerNameSearchResult {
-    enum Gender:String {
+struct SwimmerNameSearchResult: Codable {
+    enum Gender:String, Codable {
         case female = "Female"
         case male = "Male"
     }
@@ -22,3 +22,4 @@ struct SwimmerNameSearchResult {
     let gender:Gender
     let club:String
 }
+

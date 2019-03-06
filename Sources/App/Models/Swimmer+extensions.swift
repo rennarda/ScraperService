@@ -9,3 +9,5 @@ import Foundation
 import Vapor
 
 extension Swimmer: Content { }
+
+extension SwimmerNameSearchResult: Content {}
