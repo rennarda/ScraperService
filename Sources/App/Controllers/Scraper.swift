@@ -38,10 +38,6 @@ struct Scraper {
     
     private func newSession() -> URLSession {
         let configuration = URLSessionConfiguration.default
-        if #available(OSX 10.13, *, iOS 11.0, *) {
-            configuration.waitsForConnectivity = false
-        } else {
-        }
         configuration.timeoutIntervalForRequest = 5
         let session = URLSession.init(configuration: configuration)
         return session
